@@ -15,7 +15,7 @@ Otherwise modify the `start_prover.sh` script to point to the correct directory.
 
 Ensure the `prover_config.json` file is modified with the correct configuration for the prover node.
 
-Set the `server_url` to the URL of the REST server to fetch tasks from.
+Set the `server_url` to the URL of the REST server to fetch tasks from. Currently the server address is https://zkwasm-explorer.delphinuslab.com:8090
 
 Set the `priv_key` to the private key of the prover node to be used for `Deploy` tasks.
 
