@@ -1,6 +1,6 @@
 # Running the Prover Node from TAR Archive
 
-Unpack the archive by running `tar -xvf prover_node.tar` in the directory you wish to run the prover node from.
+Unpack the archive by running `tar -xvf prover_node_{UbuntuVersion}.tar` in the directory you wish to run the prover node from.
 
 ## Using TAR archive
 
