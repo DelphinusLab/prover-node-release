@@ -19,6 +19,9 @@ Set the `server_url` to the URL of the REST server to fetch tasks from. Currentl
 
 Set the `priv_key` to the private key of the prover node to be used for `Deploy` tasks.
 
+For `whitelisted_users` field, add any user addresses that are allowed to submit tasks to the prover node.
+An empty array will allow any user to submit tasks to the prover node.
+
 Set the `deployment_chain_list` to the list of chains available for deployment.
 
 The endpoints currently provided are public RPC URL's, and are not recommended for use in production as they will get rate limited.
