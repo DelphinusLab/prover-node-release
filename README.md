@@ -7,7 +7,7 @@ Unpack the archive by running `tar -xvf prover_node_{UbuntuVersion}.tar` in the 
 ### ZKWasm CLI
 
 Ensure ZKWasm CLI is setup in the ~/zkWasm directory.
-The default location for the ZKWasm CLI is `~/zkWasm/target/release/delphinus-cli`
+The default location for the ZKWasm CLI is `./delphinus-cli_{UbuntuVersion}`
 
 Otherwise modify the `start_prover.sh` script to point to the correct directory.
 
