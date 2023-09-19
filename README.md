@@ -28,7 +28,7 @@ The endpoints currently provided are public RPC URL's, and are not recommended f
 
 ### Truffle Config
 
-`npm install` within `workspace/deploy` directory to install dependencies for truffle deployments.
+`npm install` within `deploy_core/deploy` directory to install dependencies for truffle deployments.
 
 !IMPORTANT -> make sure the truffle-config.js file is modified with the correct chain details and provider information.
 Similar to the config file, the endpoints currently provided are public RPC URL's, and are not recommended for use in production as they will get rate limited.
