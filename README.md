@@ -4,31 +4,28 @@ Unpack the archive by running `tar -xvf prover_node_{UbuntuVersion}.tar` in the 
 
 ## Using TAR archive
 
-### ZKWasm CLI
-
-Ensure ZKWasm CLI is setup in the ~/zkWasm directory.
-The default location for the ZKWasm CLI is `./delphinus-cli_{UbuntuVersion}`
-
-Otherwise modify the `start_prover.sh` script to point to the correct directory.
-
 ### Config file
 
 Ensure the `prover_config.json` file is modified with the correct configuration for the prover node.
 
 Set the `server_url` to the URL of the REST server to fetch tasks from. Currently the server address is https://zkwasm-explorer.delphinuslab.com:8090
 
-Set the `priv_key` to the private key of the prover node to be used for `Deploy` tasks.
+Set the `priv_key` to the private key of the prover node to be used for identification purposes.
 
 For `whitelisted_users` field, add any user addresses that are allowed to submit tasks to the prover node.
 An empty array will allow any user to submit tasks to the prover node.
 
-Set the `deployment_chain_list` to the list of chains available for deployment.
+Some monitoring parameters can be configured in the `system_warnings` field. The prover node will log a warning if any of the parameters exceed the configured warning level values after a Task is performed.
 
-The endpoints currently provided are public RPC URL's, and are not recommended for use in production as they will get rate limited.
+```
+"system_warnings": {
+    "disk_usage_warning_level": 80.0,
+    "memory_usage_warning_level": 80.0,
+    "gpu_memory_usage_warning_level": 80.0,
+    "cpu_temp_warning_level": 75.0,
+    "gpu_temp_warning_level": 75.0
+  }
+```
+### Running the prover node
 
-### Truffle Config
-
-`npm install` within `deploy_core/deploy` directory to install dependencies for truffle deployments.
-
-!IMPORTANT -> make sure the truffle-config.js file is modified with the correct chain details and provider information.
-Similar to the config file, the endpoints currently provided are public RPC URL's, and are not recommended for use in production as they will get rate limited.
+Start the prover node by running `bash start_prover.sh` after configuring the `prover_config.json` file.
