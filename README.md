@@ -1,5 +1,7 @@
 # Running the Prover Node from TAR Archive
 
+## Please do not use this repo directly for running prover node. Instead use the Docker repo: https://github.com/DelphinusLab/prover-node-docker
+
 Unpack the archive by running `tar -xvf prover_node_{UbuntuVersion}.tar` in the directory you wish to run the prover node from.
 
 ## Using TAR archive
