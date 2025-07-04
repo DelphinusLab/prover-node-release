@@ -15,6 +15,8 @@ USER zkwasm
 
 WORKDIR /home/zkwasm
 
+RUN mkdir prover-node-release
+
 # Copy the tarball into the container
 COPY prover_node_Ubuntu2204.tar.gz /home/zkwasm/prover-node-release
 
