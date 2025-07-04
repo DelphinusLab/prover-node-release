@@ -15,6 +15,8 @@ RUN mkdir prover-node-release
 
 # Copy the tarball into the container
 COPY prover_node_Ubuntu2204.tar.gz /home/zkwasm/prover-node-release
+
+WORKDIR /home/zkwasm/prover-node-release
 # Unpack tarball
 RUN tar -xzvf prover_node_Ubuntu2204.tar.gz
 
@@ -22,6 +24,5 @@ RUN tar -xzvf prover_node_Ubuntu2204.tar.gz
 RUN mkdir logs && \
     mkdir logs/prover
 
-WORKDIR /home/zkwasm/prover-node-release
 # Command overriden by docker-compose
 CMD ["true"]
