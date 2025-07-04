@@ -1,1 +1,3 @@
+
+# TODO: tag with version
 DOCKER_BUILDKIT=0 docker build --rm --network=host -t prover-node-dev:latest .

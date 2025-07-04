@@ -16,7 +16,7 @@ USER zkwasm
 WORKDIR /home/zkwasm
 
 # Copy the tarball into the container
-COPY prover_node_Ubuntu2204.tar.gz /home/zkwasm/
+COPY prover_node_Ubuntu2204.tar.gz /home/zkwasm/prover-node-release
 
 WORKDIR /home/zkwasm/prover-node-release
 # Unpack tarball
