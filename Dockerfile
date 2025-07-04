@@ -2,9 +2,7 @@ FROM nvidia/cuda:12.2.0-devel-ubuntu22.04
 ARG DEBIAN_FRONTEND=noninteractive
 ENV TZ=Etc/UTC
 # Install required packages and setup ssh access
-RUN mkdir /var/run/sshd \
-    && /etc/init.d/ssh start \
-    && useradd -rm -d /home/zkwasm -s /bin/bash -g root -G sudo -u 1001 zkwasm \
+RUN useradd -rm -d /home/zkwasm -s /bin/bash -g root -G sudo -u 1001 zkwasm \
     && echo 'zkwasm:zkwasm' | chpasswd \
     && echo 'zkwasm ALL=(ALL:ALL) NOPASSWD: ALL' >> /etc/sudoers
 
