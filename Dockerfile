@@ -16,7 +16,7 @@ USER zkwasm
 WORKDIR /home/zkwasm
 
 # Create main directory
-RUN mkdir prover-node-release && mkdir prover-node-release/workspace/static
+RUN mkdir prover-node-release && mkdir prover-node-release/workspace && mkdir prover-node-release/workspace/static
 
 # Copy K22 and K23 params into static folder
 COPY K22.params /home/zkwasm/prover-node-release/workspace/static

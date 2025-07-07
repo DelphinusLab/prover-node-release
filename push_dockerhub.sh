@@ -16,3 +16,4 @@ docker tag rhaoio/prover-node-dev:latest $IMAGE_WITH_VERSION_TAG
 
 # Make sure to update the tag to be the latest version number
 docker push rhaoio/prover-node-dev:latest
+docker push $IMAGE_WITH_VERSION_TAG
