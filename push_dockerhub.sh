@@ -1,6 +1,8 @@
 
 IMAGE_WITH_VERSION_TAG="rhaoio/prover-node-dev:0.0.14"
 
+# Check for a force parameter to force push the image and assign to environment variable
+
 # Set login credentials for Docker Hub
 docker login -u <username> -p <password>
 # Push the docker image to dockerhub
@@ -8,7 +10,12 @@ docker login -u <username> -p <password>
 docker manifest inspect $IMAGE_WITH_VERSION_TAG > /dev/null 2>&1
 if [ $? -eq 0 ]; then
     echo "Image $IMAGE_WITH_VERSION_TAG already exists on Docker Hub. Skipping push."
-    exit 0
+
+    # If --force is not provided, exit the script
+    if [ "$1" != "--force" ]; then
+        exit 0
+    fi
+    echo "Force pushing the version $IMAGE_WITH_VERSION_TAG to Docker Hub."
 fi
 
 # Re-tag latest image to the latest tag
