@@ -10,18 +10,12 @@
 bash build_image.sh
 ```
 
-3. Push to Docker Hub:
+3. Update version tag in `push_dockerhub.sh`. This will use the tag it from the 'latest' build.
+
+Then push the image to Docker Hub by running:
 
 ```bash
 bash push_dockerhub.sh
-```
-
-## Pushing to Docker Hub
-
-To push the built prover node image to Docker Hub, run the following command:
-
-```bash
-docker push delphinuslab/prover-node:latest
 ```
 
 ## Running the Prover Node from TAR Archive

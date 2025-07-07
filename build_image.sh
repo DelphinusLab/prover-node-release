@@ -1,7 +1,7 @@
 # Check MD5 of K22 and K23 params against known MD5 values
 
-K22_MD5="d41d8cd98f00b204e9800998ecf8427e"
-K23_MD5="d41d8cd98f00b204e9800998ecf8427e"
+K22_MD5="35bedd3a457dddb2e5c31d92be99831b"
+K23_MD5="84c4c97c7e8002a90d291b26e93a5554"  # Replace with the actual MD5 value for K23
 K22_FILE="K22.params"
 K23_FILE="K23.params"
 if [ -f "$K22_FILE" ]; then
