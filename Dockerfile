@@ -15,7 +15,12 @@ USER zkwasm
 
 WORKDIR /home/zkwasm
 
-RUN mkdir prover-node-release
+# Create main directory
+RUN mkdir prover-node-release && mkdir prover-node-release/workspace/static
+
+# Copy K22 and K23 params into static folder
+COPY K22.params /home/zkwasm/prover-node-release/workspace/static
+COPY K23.params /home/zkwasm/prover-node-release/workspace/static
 
 # Copy the tarball into the container
 COPY prover_node_Ubuntu2204.tar.gz /home/zkwasm/prover-node-release
