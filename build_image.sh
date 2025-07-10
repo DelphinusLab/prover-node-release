@@ -23,4 +23,4 @@ else
     exit 1
 fi
 
-DOCKER_BUILDKIT=0 docker build --rm --network=host -t rhaoio/prover-node-dev:latest .
+DOCKER_BUILDKIT=0 docker build --rm --network=host -t zkwasm/prover-node:latest .

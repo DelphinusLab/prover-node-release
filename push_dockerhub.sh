@@ -1,5 +1,5 @@
 
-IMAGE_WITH_VERSION_TAG="rhaoio/prover-node-dev:0.0.14"
+IMAGE_WITH_VERSION_TAG="zkwasm/prover-node:0.0.14"
 
 # Check for a force parameter to force push the image and assign to environment variable
 
@@ -19,8 +19,8 @@ if [ $? -eq 0 ]; then
 fi
 
 # Re-tag latest image to the latest tag
-docker tag rhaoio/prover-node-dev:latest $IMAGE_WITH_VERSION_TAG 
+docker tag zkwasm/prover-node:latest $IMAGE_WITH_VERSION_TAG 
 
 # Make sure to update the tag to be the latest version number
-docker push rhaoio/prover-node-dev:latest
+docker push zkwasm/prover-node:latest
 docker push $IMAGE_WITH_VERSION_TAG
